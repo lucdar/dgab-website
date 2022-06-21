@@ -1,0 +1,85 @@
+:root {
+    --white-text: rgb(255, 255, 255);
+    --black-text: rgb(0, 0, 0);
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: sans-serif;
+    overflow-x: hidden; /* This shouldn't be here. Need to figure out what's causing the content overflow... */
+}
+
+.navbar {
+    height: 6vh;
+    background-color: rgb(150, 152, 158);
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+}
+
+.navbar > div {
+    margin: 10px;
+}
+.navbar > div:hover {
+    cursor:pointer;
+}
+
+.logo {
+    font-size:3vh;
+}
+
+.splash {
+    --darken-value: rgba(0, 0, 0, 0.6);
+    background: linear-gradient(var(--darken-value), var(--darken-value)), url("splash-bg.png");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 85vh;
+}
+
+.splash-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    color: var(--white-text);
+    font-family: sans-serif;
+    font-size: clamp(2.5em, 7vw, 3.5em);
+    width: max(300px, 100vw);
+    text-align: center;
+}
+
+.discord-link {
+    color: var(--white-text);
+    font-family: sans-serif;
+    font-size: 25px;
+}
+
+.discord-link:hover {
+    cursor: pointer;
+}
+
+.content {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    width: clamp(300px, 80vw, 1000px);
+    font-size:18px;
+}
+
+#WIP {
+    margin:auto;
+    font-size: 25px;
+}

@@ -36,7 +36,7 @@ body {
 }
 
 .splash {
-    --darken-value: rgba(0, 0, 0, 0.6);
+    --darken-value: rgba(0, 0, 0, 0.75);
     background: linear-gradient(var(--darken-value), var(--darken-value)), url("splash-bg.png");
     background-size: cover;
     background-position: center;
@@ -59,14 +59,15 @@ body {
     font-size: clamp(2.5em, 7vw, 3.5em);
     width: max(300px, 100vw);
     text-align: center;
+    margin-bottom: 25px;
 }
 
 .discord-link {
     color: var(--white-text);
     font-size: 25px;
     margin: 5px;
-    padding:10px;
-    border:1px solid white;
+    padding: 12px;
+    border: 2px solid white;
     border-radius: 10px;
     background-color: transparent;
     text-decoration: none;

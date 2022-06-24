@@ -28,7 +28,6 @@ body {
     margin: 10px;
     text-decoration: none;
     color: black;
-
 }
 
 .logo {
@@ -83,6 +82,11 @@ body {
     flex-direction: column;
     width: clamp(300px, 80vw, 1000px);
     font-size:18px;
+}
+.content > article > h1 {
+    font-size: 2em; 
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 #WIP {

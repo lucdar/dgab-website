@@ -8,31 +8,33 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="navbar">
-        <div class="logo" onclick="location.href='#'">DG@B</div>
-        <div class="about-link" onclick="location.href='#about'">About</div>
-        <div class="rules-link" onclick="location.href='#rules'">Rules</div>
+    <header class="navbar">
+        <a class="logo" href="#">DG@B</a>
+        <a class="about-link" href="#about">About</a>
+        <a class="rules-link" href="#rules">Rules</a>
         <!-- <div class="tutorials-link" onclick="location.href='#tutorials'">Tutorials</div> -->
-    </div>
-    <div class="splash">
+    </header>
+    <section class="splash">
         <div class="splash-text">
-            <div class="title">Dance Games at Berkeley</div>
-            <div class="discord-link" onclick="location.href = 'https:/\/discord.gg/92wgk5abQU'"><p>Join our Discord server!</p></div>
+            <h1 class="title">Dance Games at Berkeley</h1>
+            <button class="discord-link" href="https://discord.gg/92wgk5abQU">Join our Discord server!</button>
         </div>
-    </div>
+    </section>
 
-    <div class="content">
-        <div id="WIP"><p>This website is a work in progress.</p></div>
+    <section class="content">
+        <article id="WIP"><p>This website is a work in progress.</p></div>
 
-        <div id="about">
+        <article id="about">
             <h1>About Us</h1>
-            <p>Dance Games at Berkeley exists to foster a community around and through arcade style dance games like Dance Dance Revolution, Pump It Up, and In the Groove. 
+            <p>
+                Dance Games at Berkeley exists to foster a community around and through arcade style dance games like Dance Dance Revolution, Pump It Up, and In the Groove. 
                 The club also manages and maintains the Dance Dance Revolution machine in MLK Student Union. 
-                The club and machine are open to all people of all skill levels and experience.</p>
+                The club and machine are open to all people of all skill levels and experience.
+            </p>
             <p>The Machine is open whenever the UC Berkeley MLK Jr. Student Union is open. Their hours are available <a href="https://studentunion.berkeley.edu/contact-us/">here</a>.</p>
-        </div>
+        </article>
     
-        <div id="rules">
+        <article id="rules">
             <h1>Rules</h1>
             <ol>
                 <li>Respect equipment and the environment
@@ -50,11 +52,11 @@
                 </li>
                 <li>Have fun :)</li>
             </ol>
-        </div>
+        </article>
 
-        <!-- <div id="tutorials">
+        <!-- <article id="tutorials">
             <h1>Tutorials</h1>
-        </div> -->
-    </div>
+        </article> -->
+    </section>
 </body>
 </html>

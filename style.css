@@ -8,9 +8,10 @@ html {
 }
 body {
     margin: 0;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     /* This shouldn't be here. Need to figure out what's causing the content overflow... */
     overflow-x: hidden; 
+    line-height: 1.5;
 }
 
 .navbar {

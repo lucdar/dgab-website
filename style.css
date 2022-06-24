@@ -1,6 +1,7 @@
 :root {
     --white-text: rgb(255, 255, 255);
     --black-text: rgb(0, 0, 0);
+    --content-width: clamp(300px, 80vw, 1000px);
 }
 html {
     scroll-behavior: smooth;
@@ -80,8 +81,11 @@ body {
     display: flex;
     margin: auto;
     flex-direction: column;
-    width: clamp(300px, 80vw, 1000px);
+    width: var(--content-width);
     font-size:18px;
+}
+hr {
+    width: var(--content-width);
 }
 .content > article > h1 {
     font-size: 2em; 
@@ -95,6 +99,23 @@ body {
 }
 
 .footer {
+    width: var(--content-width);
+    margin: auto;
     display: flex;
-    justify-content: right; 
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.university-disclaimer {
+    color:rgb(150, 150, 150);
+    text-align: right;
+}
+@media only screen and (max-width: 615px) {
+    .footer {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .university-disclaimer {
+        text-align: center;
+    }
 }

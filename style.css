@@ -10,7 +10,7 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     /* This shouldn't be here. Need to figure out what's causing the content overflow... */
-    overflow-x: hidden; 
+    overflow-x: hidden;
     line-height: 1.5;
 }
 
@@ -58,6 +58,7 @@ body {
 .title {
     color: var(--white-text);
     font-size: clamp(2.5em, 7.5vw, 4.5em);
+    line-height: 1;
     width: clamp(0px, 80vw, 1000px);
     text-align: center;
     margin: 25px;
@@ -87,6 +88,7 @@ body {
 }
 hr {
     width: var(--content-width);
+    background-color: #000000;
 }
 .content > article > h1 {
     font-size: 2em; 
@@ -96,6 +98,7 @@ hr {
 
 #WIP {
     margin: auto;
+    text-align: center;
     font-size: 25px;
 }
 

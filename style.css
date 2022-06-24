@@ -109,6 +109,7 @@ hr {
 .university-disclaimer {
     color:rgb(150, 150, 150);
     text-align: right;
+    width: clamp(300px, 60vw, 550px);
 }
 @media only screen and (max-width: 615px) {
     .footer {

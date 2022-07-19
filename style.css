@@ -28,17 +28,25 @@ hr {
     top: 0;
 
     display: flex;
+    justify-content: center;
+}
+.navbar-container {
+    width: var(--content-width);
+
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: left;
 }
-.navbar > a {
+.navbar-container > a {
     margin: 10px;
     text-decoration: none;
     color: black;
 }
 .logo {
-    font-size:25px;
+    
+    margin-left: 0px !important;
+    font-size: 25px;
 }
 .splash {
     --darken-value: rgba(0, 0, 0, 0.75);

@@ -1,7 +1,8 @@
 :root {
     --white-text: rgb(255, 255, 255);
-    --black-text: rgb(0, 0, 0);
+    --black-text: rgb(40, 40, 40);
     --content-width: clamp(300px, 80vw, 1000px);
+    --navbar-color: rgb(176, 183, 195);
 }
 html {
     scroll-behavior: smooth;
@@ -9,14 +10,20 @@ html {
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    /* This shouldn't be here. Need to figure out what's causing the content overflow... */
-    overflow-x: hidden;
+    overflow-x: hidden; /* This shouldn't be here. Need to figure out what's causing the content overflow... */
     line-height: 1.5;
+    color: var(--black-text);
+    background-color: rgb(255, 255, 255);
 }
-
+hr {
+    width: var(--content-width);
+    background: rgb(200, 200, 200); 
+    border: 0;
+    height: 2px;
+}
 .navbar {
     height: 50px;
-    background-color: rgb(120, 128, 142);
+    background-color: var(--navbar-color);
     position: sticky;
     top: 0;
 
@@ -25,17 +32,14 @@ body {
     align-items: center;
     justify-content: left;
 }
-
 .navbar > a {
     margin: 10px;
     text-decoration: none;
     color: black;
 }
-
 .logo {
     font-size:25px;
 }
-
 .splash {
     --darken-value: rgba(0, 0, 0, 0.75);
     background: linear-gradient(var(--darken-value), var(--darken-value)), url("splash-bg.png");
@@ -48,13 +52,11 @@ body {
 
     height: 85vh;
 }
-
 .splash-text {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .title {
     color: var(--white-text);
     font-size: clamp(2.5em, 7.5vw, 4.5em);
@@ -63,7 +65,6 @@ body {
     text-align: center;
     margin: 25px;
 }
-
 .discord-link {
     color: var(--white-text);
     font-size: 25px;
@@ -74,11 +75,9 @@ body {
     background-color: transparent;
     text-decoration: none;
 }
-
 .discord-button:hover {
     cursor: pointer;
 }
-
 .content {
     display: flex;
     margin: auto;
@@ -86,22 +85,16 @@ body {
     width: var(--content-width);
     font-size:18px;
 }
-hr {
-    width: var(--content-width);
-    background-color: #000000;
-}
 .content > article > h1 {
-    font-size: 2em; 
-    margin-top: 20px;
+    font-size: 1.5em; 
+    margin-top: 15px;
     margin-bottom: 10px;
 }
-
 #WIP {
     margin: auto;
     text-align: center;
     font-size: 25px;
 }
-
 .footer {
     width: var(--content-width);
     margin: auto;

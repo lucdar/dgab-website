@@ -106,11 +106,6 @@ hr {
 .footnote {
     font-size:16px;
 }
-#WIP {
-    margin: auto;
-    text-align: center;
-    font-size: 25px;
-}
 .footer {
     width: var(--content-width);
     margin: auto;

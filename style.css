@@ -60,7 +60,7 @@ hr {
 }
 .splash {
     --darken-value: rgba(0, 0, 0, 0.75);
-    background: linear-gradient(var(--darken-value), var(--darken-value)), url("splash-bg.png");
+    background: linear-gradient(var(--darken-value), var(--darken-value)), url("splash-bg.webp");
     background-size: cover;
     background-position: center;
 

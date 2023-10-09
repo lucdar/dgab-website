@@ -61,7 +61,8 @@
                         // Add the song information to the pack
                         packs[packName].push({
                             title: songName,
-                            difficulties: song.difficulties.join(', ')
+                            difficulties: song.difficulties.join(', '),
+                            artist: song.artist
                         });
                     }
                 }
@@ -76,7 +77,9 @@
 
                         packs[packName].forEach(song => {
                             const songItem = document.createElement('li');
-                            songItem.textContent = `${song.title} | Difficulties: ${song.difficulties}`;
+                            // Conditionally add the hyphen only when song.artist is not blank
+                            const artistText = song.artist ? `${song.artist} - ` : '';
+                            songItem.textContent = `${artistText}${song.title} | Difficulties: ${song.difficulties}`;
                             songList.appendChild(songItem);
                         });
                     }

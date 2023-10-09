@@ -35,7 +35,8 @@
 
     <script>
         // Replace 'jsonUrl' to whatever it is
-        const jsonUrl = 'songs-2.json';
+        const jsonUrl = 'songs-2-2023.json';
+        
 
         // Function to fetch and display song data
         async function fetchAndDisplaySongs() {
@@ -43,23 +44,44 @@
                 const response = await fetch(jsonUrl);
                 const data = await response.json();
 
+                // Initialize the list element
                 const songList = document.getElementById('songList');
+                const packs = {};
 
-                for (const albumName in data) {
-                    if (data.hasOwnProperty(albumName)) {
-                        const songs = data[albumName];
-                        const albumItem = document.createElement('li');
-                        albumItem.classList.add('album-name');
-                        albumItem.textContent = albumName;
-                        songList.appendChild(albumItem);
+                for (const songName in data) {
+                    if (data.hasOwnProperty(songName)) {
+                        const song = data[songName];
+                        const packName = song.pack;
 
-                        songs.forEach(song => {
+                        // If the packName doesn't exist in the packs object, create it
+                        if (!packs[packName]) {
+                            packs[packName] = [];
+                        }
+
+                        // Add the song information to the pack
+                        packs[packName].push({
+                            title: songName,
+                            difficulties: song.difficulties.join(', ')
+                        });
+                    }
+                }
+
+                // Iterate through packs and create list items
+                for (const packName in packs) {
+                    if (packs.hasOwnProperty(packName)) {
+                        const packItem = document.createElement('li');
+                        packItem.textContent = packName;
+                        packItem.classList.add('album-name');
+                        songList.appendChild(packItem);
+
+                        packs[packName].forEach(song => {
                             const songItem = document.createElement('li');
-                            songItem.textContent = `${song.title} | Difficulties: ${song.charts.map(chart => chart.meter).join(', ')}`;
+                            songItem.textContent = `${song.title} | Difficulties: ${song.difficulties}`;
                             songList.appendChild(songItem);
                         });
                     }
                 }
+
             } catch (error) {
                 console.error('Error fetching or displaying data:', error);
             }

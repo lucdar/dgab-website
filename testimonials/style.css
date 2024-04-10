@@ -1,12 +1,22 @@
-ul {
-  list-style-type: none;
-  padding: 0;
-  text-align: center;
+.content h2 {
+  font-size: 1.3em;
+  margin-top: 10px;
+  margin-bottom: 3px;
+}
+.content p {
+  font-size: 0.9em;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
-li {
-  margin: 10px 0;
-}
-.album-name {
+.content .question {
+  font-size: 1em;
   font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+
+br {
+  display: block;
+  margin: 10px 0;
 }
